@@ -16,10 +16,32 @@
 </head>
 <body>
 <div id="app">
-    <div style="height: 2000px;background-color: #ff6600"></div>
-    <mainnavcpn></mainnavcpn>
-    <gotopcpn></gotopcpn>
+    <homecpn></homecpn>
 </div>
+<template id="homeTemp">
+    <div>
+        <!--<topbannercpn v-bind:c-good-lists="goodLists">-->
+        <topbannercpn>
+            <div slot="loc">
+                <i class="fa fa-location-arrow"></i>大连市东软信息学院<i class="fa fa-arrow-circle-o-down"></i>
+            </div>
+
+            <div slot="content" class="fixed-top">
+                <div class="input-group mb-3 mt-3 col-10 offset-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-search"></i></span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="搜索饿了么商家,商品名称">
+                </div>
+            </div>
+        </topbannercpn>
+        <div style="height: 2000px;background-color: #ff6600">
+
+        </div>
+        <mainnavcpn></mainnavcpn>
+        <gotopcpn></gotopcpn>
+    </div>
+</template>
 <template id="goTopTemp">
     <transition enter-active-class="animated fadeIn">
         <div class="gotTopTemp" v-show="topDistance>100" v-on:click="goTop">
@@ -27,15 +49,21 @@
         </div>
     </transition>
 </template>
-<!--页面底部的主导航-->
+<!--&lt;!&ndash;页面底部的主导航&ndash;&gt;-->
 <template id="mainNavTemp">
     <div class="container-fluid fixed-bottom mainNavTemp text-muted">
         <div class="row">
             <h6 class="col-2 offset-2"><i class="fa fa-home"></i>首页</h6>
-            <h6 class="col-2"><i class="fa fa-home"></i>首页</h6>
-            <h6 class="col-2"><i class="fa fa-home"></i>首页</h6>
-            <h6 class="col-2"><i class="fa fa-home"></i>首页</h6>
+            <h6 class="col-2"><i class="fa fa-home"></i>发现</h6>
+            <h6 class="col-2"><i class="fa fa-home"></i>订单</h6>
+            <h6 class="col-2"><i class="fa fa-home"></i>我的</h6>
         </div>
+    </div>
+</template>
+<template id="topBannerTemp">
+    <div class="topBannerTemp">
+        <slot name="loc"></slot>
+        <slot name="content"></slot>
     </div>
 </template>
 <script src="../js/vue.js"></script>
