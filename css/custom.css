@@ -18,3 +18,42 @@
 li{
     list-style-type: none;
 }
+.bgimg{
+    /**
+	 * 设置容器宽度95%，然后水平居中，这样两边留白;
+	 * 这里不能用padding，因为背景图片也会覆盖padding
+	 */
+    width: 95%;
+    margin: 0 auto;
+    height: 29vw;
+
+    /*此三个样式组合，可以保证背景图片充满整个容器*/
+    background-image: url(../img/index_banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    box-sizing: border-box;
+    padding: 2vw 6vw;
+    margin-top: 60px;
+}
+.super{
+    width: 95%;
+    margin: 0 auto;
+    height: 100px;
+    background-color: #FEEDC1;
+    margin-top: 1.3vw;
+    border-radius: 2vm;
+    color: #644F1B;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.super span{
+    line-height: 100px;
+}
+.super img{
+    float: left;
+    width: 70px;
+    height: 70px;
+}

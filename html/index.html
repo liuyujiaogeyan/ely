@@ -39,18 +39,30 @@
                 </div>
             </div>
         </topbannercpn>
-        <typecpn></typecpn>
-        <div style="height: 2000px;background-color: #ff6600">
-
+        <!--<typecpn></typecpn>-->
+        <div style="height: 2000px">
+            <typecpn></typecpn>
+            <div class="bgimg">
+                <h1 class="font-weight-bold">品质套餐</h1>
+                <h3 class="text-muted">搭配齐全吃得好</h3>
+                <a href="index.html"><h3>立即抢购 ></h3></a>
+            </div>
+            <div class="super">
+                <div>
+                    <img src="../img/super_member.png"/>
+                    <span class="font-weight-bolder display-4">超级会员 ・</span>
+                    <span>每月享超值权益</span>
+                </div>
+            </div>
         </div>
         <mainnavcpn></mainnavcpn>
         <gotopcpn></gotopcpn>
     </div>
 </template>
 <template id="typeTemp">
-    <div class="container-fluid fixed-bottom mainNavTemp text-muted">
+    <div class="container-fluid">
         <div class="row">
-            <span v-for="(item,index) in $root.goodLists" class="col-2 "/>
+            <span v-for="(item,index) in $root.goodLists" class="col-2 text-center mt-3"  :class="{'offset-1':!(index%5)}"/>
         <router-link to="/mou">
         <img v-bind:src="item.img"/><br/>
         {{item.tname}}
@@ -68,6 +80,7 @@
         <!--</li>-->
     <!--</ul>-->
 </template>
+
 <template id="mouTemp">
     <div>
         <topbannercpn>
@@ -85,6 +98,7 @@
         <gotopcpn></gotopcpn>
     </div>
 </template>
+
 <!--我的页面登录组件-->
 <template id="loginTemp">
     <div>
