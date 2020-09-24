@@ -48,15 +48,25 @@
     </div>
 </template>
 <template id="typeTemp">
+    <div class="container-fluid fixed-bottom mainNavTemp text-muted">
+        <div class="row">
+            <span v-for="(item,index) in $root.goodLists" class="col-2 "/>
+        <router-link to="/mou">
+        <img v-bind:src="item.img"/><br/>
+        {{item.tname}}
+        </router-link>
+    </span>
+        </div>
+    </div>>
 
-    <ul>
-        <li v-for="(item,index) in $root.goodLists" class="col-2 offset-1">
-            <router-link to="/mou">
-                <img v-bind:src="item.img"/><br/>
-                {{item.tname}}
-            </router-link>
-        </li>
-    </ul>
+    <!--<ul>-->
+        <!--<li v-for="(item,index) in $root.goodLists" class="col-2 offset-1">-->
+            <!--<router-link to="/mou">-->
+                <!--<img v-bind:src="item.img"/><br/>-->
+                <!--{{item.tname}}-->
+            <!--</router-link>-->
+        <!--</li>-->
+    <!--</ul>-->
 </template>
 <template id="mouTemp">
     <div>
