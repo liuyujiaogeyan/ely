@@ -1,5 +1,8 @@
 ;
 //创建组件
+let orderList = Vue.extend({
+   template:'#orderTemp'
+});
 let homeCpn = Vue.extend({
     template:'#homeTemp',
     props:['cgoodlists']
@@ -52,6 +55,7 @@ let goTopCpn = Vue.extend({
 });
 
 //注册组件
+let orderlist = Vue.component('orderlist',orderList);
 let mainnavcpn = Vue.component('mainnavcpn',mainNavCpn);
 let homecpn = Vue.component('homecpn',homeCpn);
 let moucpn = Vue.component('moucpn',mouCpn);
@@ -63,6 +67,7 @@ let topbannercpn = Vue.component('topbannercpn',topBannerCpn);
 
 //配置路由
 let routers = [
+    {path:'/odlist',component:orderList },
     {path:'/home',component:homeCpn},
     {path:'/mou',component:mouCpn},
     {path:'/login',component:loginCpn},
@@ -78,7 +83,8 @@ let myrouter = new VueRouter({
 const vm = new Vue({
     el:"#app",
     data:{
-        goodLists:[]
+        goodLists:[],
+        badLists:[],
     },
     router:myrouter,
     mounted(){
@@ -88,5 +94,12 @@ const vm = new Vue({
                  this.goodLists = res.body.dataZone.typeLists;
             }
          );
+        this.$http.get("../data/我的订单.json").then(
+            function (res){
+                //console.log(res);
+                this.badLists = res.body.dataZone.lists;
+            }
+        );
+
      }
 });

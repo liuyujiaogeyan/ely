@@ -57,3 +57,24 @@ li{
     width: 70px;
     height: 70px;
 }
+.wrapper .order li .order-info{
+    box-sizing: border-box;
+    padding: 2vw 4vw;
+    font-size: 4vw;
+    color: #666;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.wrapper .order li .order-info .order-info-right{
+    display: flex;
+}
+.wrapper .order li .order-info .order-info-right .order-info-right-icon{
+    background-color: #f90;
+    color: #fff;
+    border-radius: 3px;
+    margin-left: 2vw;
+    user-select: none;
+    cursor: pointer;
+}
