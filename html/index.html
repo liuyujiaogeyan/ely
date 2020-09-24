@@ -133,6 +133,52 @@
     </div>
 </template>
 
+<!--下面是在线支付页面-->
+<template id="payTemp">
+    <div class="wrapper">
+        <topbannercpn>
+            <div slot="content" class="fixed-top">
+                在线支付
+            </div>
+        </topbannercpn>
+        <h3>订单信息:</h3>
+        <div v-for="(item,index) in $root.badLists" >
+            <ul class="order">
+                <li>
+                    <div class="order-info">
+                        <p>{{item.tname}}<i class="fa fa-caret-down"></i></p>
+                        <div class="order-info-right">
+                            <p>&#165;{{item.allprice}}</p>
+                        </div>
+                    </div>
+                    <ul class="order-detailet">
+                        <li>
+                            <p>{{item.foodname}}</p>
+                            <p>&#165;{{item.foodnameprice}}</p>
+                        </li>
+                        <li>
+                            <p>{{item.foodname2}}</p>
+                            <p>&#165;{{item.foodname2price}}</p>
+                        </li>
+                        <li>
+                            <p>{{item.peisong}}</p>
+                            <p>&#165;3</p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            </li>
+            </ul>
+
+        </div>
+        <ul class="wodima">
+            <li><img src="../img/alipay.png" alt="">
+                <i class="fa fa-check-square"></i></li>
+            <li><img src="../img/wechat.png" alt=""></li>
+        </ul>
+
+    </div>
+</template>
 <!--下面是订单页面-->
 <template id="orderTemp">
     <div class="wrapper">
@@ -149,7 +195,9 @@
                 <p>{{item.tname}}<i class="fa fa-caret-down"></i></p>
                 <div class="order-info-right">
                     <p>&#165;{{item.allprice}}</p>
-                    <div class="order-info-right-icon">{{item.gotopay}}</div>
+                    <div class="order-info-right-icon">
+                        <router-link to="/payonline">{{item.gotopay}}</router-link>
+                    </div>
                 </div>
             </div>
             <ul class="order-detailet">

@@ -1,5 +1,8 @@
 ;
 //创建组件
+let payOnline = Vue.extend({
+    template:'#payTemp'
+})
 let orderList = Vue.extend({
    template:'#orderTemp'
 });
@@ -55,6 +58,7 @@ let goTopCpn = Vue.extend({
 });
 
 //注册组件
+let payonline = Vue.component('payonline',payOnline)
 let orderlist = Vue.component('orderlist',orderList);
 let mainnavcpn = Vue.component('mainnavcpn',mainNavCpn);
 let homecpn = Vue.component('homecpn',homeCpn);
@@ -67,6 +71,7 @@ let topbannercpn = Vue.component('topbannercpn',topBannerCpn);
 
 //配置路由
 let routers = [
+    {path:'/payonline',component:payOnline},
     {path:'/odlist',component:orderList },
     {path:'/home',component:homeCpn},
     {path:'/mou',component:mouCpn},
