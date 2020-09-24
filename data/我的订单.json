@@ -1,0 +1,25 @@
+{
+  "dataZone":{
+  "lists":[
+    {
+      "tname": "万家饺子",
+      "foodname": "纯肉鲜肉(水饺)x2",
+      "foodname2": "玉米鲜肉(水饺)x1",
+      "peisong": "配送费",
+      "foodnameprice": "15",
+      "foodname2price": "16",
+      "peisongprice": "3"
+    },
+    {
+      "tname": "小锅拌饭豆腐馆",
+      "foodname": "纯肉鲜肉(水饺)x2",
+      "foodname2": "玉米鲜肉(水饺)x1",
+      "peisong": "配送费",
+      "foodnameprice": "15",
+      "foodname2price": "16",
+      "peisongprice": "3"
+    }
+
+  ]
+}
+}
