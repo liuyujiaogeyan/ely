@@ -90,6 +90,7 @@ const vm = new Vue({
     data:{
         goodLists:[],
         badLists:[],
+        shopLists:[],
     },
     router:myrouter,
     mounted(){
@@ -103,6 +104,12 @@ const vm = new Vue({
             function (res){
                 //console.log(res);
                 this.badLists = res.body.dataZone.lists;
+            }
+        );
+        this.$http.get("../data/商家列表.json").then(
+            function (res){
+                //console.log(res);
+                this.shopLists = res.body.dataZone.lists;
             }
         );
 

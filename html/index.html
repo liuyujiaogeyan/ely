@@ -42,18 +42,22 @@
         <!--<typecpn></typecpn>-->
         <div style="height: 2000px">
             <typecpn></typecpn>
+            <!-- 广告-->
             <div class="bgimg">
                 <h1 class="font-weight-bold">品质套餐</h1>
                 <h3 class="text-muted">搭配齐全吃得好</h3>
                 <a href="index.html"><h3>立即抢购 ></h3></a>
             </div>
+            <!--会员-->
             <div class="super">
-                <div>
                     <img src="../img/super_member.png"/>
-                    <span class="font-weight-bolder display-4">超级会员 ・</span>
+                    <span class="font-weight-bolder display-4">超级会员・</span>
                     <span>每月享超值权益</span>
-                </div>
+                <a href="index.html"><span class="text-right">立即开通 ></span></a>
             </div>
+
+            <!--推荐商家-->
+            <h3 class="text-center">---推荐商家---</h3>
         </div>
         <mainnavcpn></mainnavcpn>
         <gotopcpn></gotopcpn>
@@ -81,14 +85,28 @@
     <!--</ul>-->
 </template>
 
+<!--商户列表组件-->
 <template id="mouTemp">
     <div>
-        <topbannercpn>
-
-            <div slot="content" class="fixed-top">
-                商户列表
+          <topbannercpn>
+              <div slot="content"  class="fixed-top">
+                    商户列表
+              </div>
+          </topbannercpn>
+        <div v-for="(item,index) in $root.shopLists" class="container-fluid">
+            <div class="row">
+                <div class="col-2">
+                    <img v-bind:src="item.img"/>
+                </div>
+                <div class="col-10">
+                    <h4>{{item.name}}</h4>
+                    <span class="text-muted">{{item.price}}</span>
+                    <span class="text-muted">{{item.pprice}}</span><br/>
+                    <p class="text-muted">{{item.message}}</p>
+                </div>
+                <!--            <p>{{item.logal}}</p>-->
             </div>
-        </topbannercpn>
+    </div>
         <!--        <div style="height: 2000px;background-color: #ff6600">-->
         <!--            <ul>-->
         <!--                <li v-for="(item,index) in cgoodlists">{{item.gname}} &#45;&#45; {{item.gcount}}</li>-->
@@ -185,7 +203,7 @@
     <div class="wrapper">
     <topbannercpn>
         <div slot="content" class="fixed-top">
-            我的订单啊
+            我的订单啊123
         </div>
     </topbannercpn>
     <h3>你这订单没给钱呢</h3>

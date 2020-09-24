@@ -42,12 +42,16 @@ li{
     height: 100px;
     background-color: #FEEDC1;
     margin-top: 1.3vw;
+    margin-bottom: 50px;
     border-radius: 2vm;
     color: #644F1B;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.super div{
+    height: 100px;
 }
 .super span{
     line-height: 100px;
