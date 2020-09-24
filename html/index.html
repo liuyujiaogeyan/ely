@@ -16,13 +16,17 @@
 </head>
 <body>
 <div id="app">
-    <homecpn></homecpn>
+    <!--    router-view就是组件显示的区域,渲染区域-->
+    <transition enter-active-class="animated fadeIn">
+        <router-view></router-view>
+    </transition>
+    <!--<homecpn></homecpn>-->
 </div>
 <template id="homeTemp">
     <div>
         <!--<topbannercpn v-bind:c-good-lists="goodLists">-->
         <topbannercpn>
-            <div slot="loc">
+            <div slot="loc" v-on:click="myFunc(age,$event)">
                 <i class="fa fa-location-arrow"></i>大连东软信息学院<i class="fa fa-arrow-circle-o-down"></i>
             </div>
 
@@ -35,9 +39,42 @@
                 </div>
             </div>
         </topbannercpn>
+        <typecpn></typecpn>
         <div style="height: 2000px;background-color: #ff6600">
 
         </div>
+        <mainnavcpn></mainnavcpn>
+        <gotopcpn></gotopcpn>
+    </div>
+</template>
+<template id="typeTemp">
+    <div class="container-fluid fixed-bottom mainNavTemp text-muted">
+        <div class="row">
+
+        </div>
+    <div/>
+    <ul>
+        <li v-for="(item,index) in $root.goodLists" class="col-2 offset-1">
+            <router-link to="/mou">
+                <img v-bind:src="item.img"/><br/>
+                {{item.tname}}
+            </router-link>
+        </li>
+    </ul>
+</template>
+<template id="mouTemp">
+    <div>
+        <topbannercpn>
+
+            <div slot="content" class="fixed-top">
+                商户列表
+            </div>
+        </topbannercpn>
+        <!--        <div style="height: 2000px;background-color: #ff6600">-->
+        <!--            <ul>-->
+        <!--                <li v-for="(item,index) in cgoodlists">{{item.gname}} &#45;&#45; {{item.gcount}}</li>-->
+        <!--            </ul>-->
+        <!--        </div>-->
         <mainnavcpn></mainnavcpn>
         <gotopcpn></gotopcpn>
     </div>
@@ -53,8 +90,12 @@
 <template id="mainNavTemp">
     <div class="container-fluid fixed-bottom mainNavTemp text-muted">
         <div class="row">
-            <h6 class="col-2 offset-2"><i class="fa fa-home"></i>首页</h6>
-            <h6 class="col-2"><i class="fa fa-home"></i>发现</h6>
+            <router-link to="/home">
+                <h6 class="col-2 offset-2"><i class="fa fa-home"></i>首页</h6>
+            </router-link>
+            <router-link to="/mou">
+                <h6 class="col-2"><i class="fa fa-home"></i>发现</h6>
+            </router-link>
             <h6 class="col-2"><i class="fa fa-home"></i>订单</h6>
             <h6 class="col-2"><i class="fa fa-home"></i>我的</h6>
         </div>

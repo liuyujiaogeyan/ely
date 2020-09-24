@@ -1,14 +1,20 @@
 ;
 //创建组件
 let homeCpn = Vue.extend({
-    template:'#homeTemp'
+    template:'#homeTemp',
+    props:['cgoodlists']
+});
+let mouCpn = Vue.extend({
+    template:'#mouTemp',
+});
+let typeCpn = Vue.extend({
+    template:'#typeTemp',
 });
 let mainNavCpn = Vue.extend({
     template:'#mainNavTemp'
 });
 let topBannerCpn = Vue.extend({
     template:'#topBannerTemp',
-    props:['cGoodLists']
 });
 let goTopCpn = Vue.extend({
     template:'#goTopTemp',
@@ -42,19 +48,35 @@ let goTopCpn = Vue.extend({
 //注册组件
 let mainnavcpn = Vue.component('mainnavcpn',mainNavCpn);
 let homecpn = Vue.component('homecpn',homeCpn);
+let moucpn = Vue.component('moucpn',mouCpn);
 let gotopcpn = Vue.component('gotopcpn',goTopCpn);
+let typecpn = Vue.component('typecpn',typeCpn);
 let topbannercpn = Vue.component('topbannercpn',topBannerCpn);
+
+//配置路由
+let routers = [
+    {path:'/home',component:homeCpn},
+    {path:'/mou',component:mouCpn},
+    {path:'/',component:homeCpn},
+    {path:'*',redirect:'/home'},
+];
+//生成路由实例
+let myrouter = new VueRouter({
+    routes:routers
+});
+
 const vm = new Vue({
     el:"#app",
     data:{
         goodLists:[]
     },
-    // mounted(){
-    //     this.$http.get("data/商品类型.json").then(
-    //         function (res){
-    //             //console.log(res);
-    //             this.goodLists = res.body.dataZone.typeLists;
-    //         }
-    //     );
-    // }
+    router:myrouter,
+    mounted(){
+         this.$http.get("../data/商品类型.json").then(
+               function (res){
+                //console.log(res);
+                 this.goodLists = res.body.dataZone.typeLists;
+            }
+         );
+     }
 });
