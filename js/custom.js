@@ -7,6 +7,12 @@ let homeCpn = Vue.extend({
 let mouCpn = Vue.extend({
     template:'#mouTemp',
 });
+let loginCpn = Vue.extend({
+    template:'#loginTemp',
+});
+let registerCpn = Vue.extend({
+    template:'#registerTemp',
+});
 let typeCpn = Vue.extend({
     template:'#typeTemp',
 });
@@ -49,6 +55,8 @@ let goTopCpn = Vue.extend({
 let mainnavcpn = Vue.component('mainnavcpn',mainNavCpn);
 let homecpn = Vue.component('homecpn',homeCpn);
 let moucpn = Vue.component('moucpn',mouCpn);
+let logincpn = Vue.component('logincpn',loginCpn);
+let registercpn = Vue.component('registercpn',registerCpn);
 let gotopcpn = Vue.component('gotopcpn',goTopCpn);
 let typecpn = Vue.component('typecpn',typeCpn);
 let topbannercpn = Vue.component('topbannercpn',topBannerCpn);
@@ -57,6 +65,8 @@ let topbannercpn = Vue.component('topbannercpn',topBannerCpn);
 let routers = [
     {path:'/home',component:homeCpn},
     {path:'/mou',component:mouCpn},
+    {path:'/login',component:loginCpn},
+    {path:'/register',component:registerCpn},
     {path:'/',component:homeCpn},
     {path:'*',redirect:'/home'},
 ];

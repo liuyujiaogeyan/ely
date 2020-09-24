@@ -55,7 +55,7 @@
         <img v-bind:src="item.img"/><br/>
         {{item.tname}}
         </router-link>
-    </span>
+            </span>
         </div>
     </div>>
 
@@ -85,6 +85,79 @@
         <gotopcpn></gotopcpn>
     </div>
 </template>
+<!--我的页面登录组件-->
+<template id="loginTemp">
+    <div>
+        <topbannercpn>
+            <div slot="content" class="fixed-top">
+                用户登录
+            </div>
+        </topbannercpn>
+        <div>
+            <form>
+                <div class="input-group mb-3 ">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">手机号码:</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="手机号码" id="demo" name="phone">
+                </div>
+                <div class="input-group mb-3 ">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">用户密码:</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="密码" id="demo1" name="password">
+                </div>
+                <button type="button" class="btn btn-success btn-block">登录</button>
+                <router-link to="/register">
+                    <button type="button" class="btn btn-outline-secondary btn-block">去注册</button>
+                </router-link>
+
+            </form>
+        </div>
+        <mainnavcpn></mainnavcpn>
+        <gotopcpn></gotopcpn>
+    </div>
+</template>
+
+<!--注册组件-->
+<template id="registerTemp">
+    <div>
+        <topbannercpn>
+            <div slot="content" class="fixed-top">
+                用户注册
+            </div>
+        </topbannercpn>
+        <form>
+            <div class="input-group mb-3 ">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">手机号码:</span>
+                </div>
+                <input type="text" class="form-control" placeholder="手机号码"  name="phone">
+            </div>
+            <div class="input-group mb-3 ">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">用户密码:</span>
+                </div>
+                <input type="text" class="form-control" placeholder="密码"  name="password">
+            </div>
+            <div class="input-group mb-3 ">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">确认密码:</span>
+                </div>
+                <input type="text" class="form-control" placeholder="确认密码"  name="phone">
+            </div>
+            <div class="input-group mb-3 ">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">用户姓名:</span>
+                </div>
+                <input type="text" class="form-control" placeholder="用户姓名"  name="password">
+            </div>
+            性别:<input type="radio" name="sex">男
+                <input type="radio" name="sex">女
+            <button type="button" class="btn btn-success btn-block">注册</button>
+        </form>
+    </div>
+</template>
 <template id="goTopTemp">
     <transition enter-active-class="animated fadeIn">
         <div class="gotTopTemp" v-show="topDistance>100" v-on:click="goTop">
@@ -96,14 +169,18 @@
 <template id="mainNavTemp">
     <div class="container-fluid fixed-bottom mainNavTemp text-muted">
         <div class="row">
-            <router-link to="/home">
-                <h6 class="col-2 offset-2"><i class="fa fa-home"></i>首页</h6>
+            <router-link to="/home" class="col-2 offset-2">
+                <h6 ><i class="fa fa-home"></i>首页</h6>
             </router-link>
-            <router-link to="/mou">
-                <h6 class="col-2"><i class="fa fa-home"></i>发现</h6>
+            <router-link to="/mou" class="col-2">
+                <h6 ><i class="fa fa-home"></i>发现</h6>
             </router-link>
-            <h6 class="col-2"><i class="fa fa-home"></i>订单</h6>
-            <h6 class="col-2"><i class="fa fa-home"></i>我的</h6>
+            <router-link to="/mou" class="col-2">
+            <h6 ><i class="fa fa-home"></i>订单</h6>
+            </router-link>
+            <router-link to="/login" class="col-2">
+                <h6 ><i class="fa fa-home"></i>我的</h6>
+            </router-link>
         </div>
     </div>
 </template>
