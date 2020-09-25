@@ -102,7 +102,7 @@ li{
 }
 .tanxing{
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
 }
 .jishuqi{
     flex-grow: 1;

@@ -63,15 +63,17 @@
         <gotopcpn></gotopcpn>
     </div>
 </template>
+<!--主页美食分类-->
 <template id="typeTemp">
     <div class="container-fluid">
-        <div class="row">
-            <span v-for="(item,index) in $root.goodLists" class="col-2 text-center mt-3"  :class="{'offset-1':!(index%5)}"/>
+        <div class="tanxing">
+            <div v-for="(item,index) in $root.goodLists" />
             <router-link to="/mou">
                 <img v-bind:src="item.img"/><br/>
+
                 {{item.tname}}
             </router-link>
-            </span>
+            </div>
         </div>
     </div>>
 
