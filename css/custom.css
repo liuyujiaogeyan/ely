@@ -75,12 +75,13 @@ li{
     display: flex;
 }
 .wrapper .order li .order-info .order-info-right .order-info-right-icon{
-    background-color: #f90;
+    background-color: #ff02e6;
     color: #fff;
     border-radius: 3px;
     margin-left: 2vw;
     user-select: none;
     cursor: pointer;
+    color: #34ce57;
 }
 .wrapper .order li .order-detailet{
     width: 100%;
@@ -99,22 +100,7 @@ li{
 .wodima i{
     color: #34ce57;
 }
-.shopmessageTemp>div{
-    width: 100%;
-    height: 35vw;
-    /*使用上外边距避开header部分*/
-    margin-top: 30px;
-
+.tanxing{
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.shopmessageTemp>div img{
-    width: 40vw;
-    height: 30vw;
-    border-radius: 5px;
-}
-.shopmessageTemp p{
-    font-size: 30px;
-
+    flex-direction: row;
 }

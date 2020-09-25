@@ -50,9 +50,9 @@
             </div>
             <!--会员-->
             <div class="super">
-                    <img src="../img/super_member.png"/>
-                    <span class="font-weight-bolder display-4">超级会员・</span>
-                    <span>每月享超值权益</span>
+                <img src="../img/super_member.png"/>
+                <span class="font-weight-bolder display-4">超级会员・</span>
+                <span>每月享超值权益</span>
                 <a href="index.html"><span class="text-right">立即开通 ></span></a>
             </div>
 
@@ -67,48 +67,46 @@
     <div class="container-fluid">
         <div class="row">
             <span v-for="(item,index) in $root.goodLists" class="col-2 text-center mt-3"  :class="{'offset-1':!(index%5)}"/>
-        <router-link to="/mou">
-        <img v-bind:src="item.img"/><br/>
-        {{item.tname}}
-        </router-link>
+            <router-link to="/mou">
+                <img v-bind:src="item.img"/><br/>
+                {{item.tname}}
+            </router-link>
             </span>
         </div>
     </div>>
 
     <!--<ul>-->
-        <!--<li v-for="(item,index) in $root.goodLists" class="col-2 offset-1">-->
-            <!--<router-link to="/mou">-->
-                <!--<img v-bind:src="item.img"/><br/>-->
-                <!--{{item.tname}}-->
-            <!--</router-link>-->
-        <!--</li>-->
+    <!--<li v-for="(item,index) in $root.goodLists" class="col-2 offset-1">-->
+    <!--<router-link to="/mou">-->
+    <!--<img v-bind:src="item.img"/><br/>-->
+    <!--{{item.tname}}-->
+    <!--</router-link>-->
+    <!--</li>-->
     <!--</ul>-->
 </template>
 
 <!--商户列表组件-->
 <template id="mouTemp">
     <div>
-          <topbannercpn>
-              <div slot="content"  class="fixed-top">
-                    商户列表
-              </div>
-          </topbannercpn>
-        <router-link to="/smlist">
-        <div v-for="(item,index) in $root.shopLists" class="container-fluid">
-            <div class="row">
-                <div class="col-2">
-                    <img v-bind:src="item.img"/>
-                </div>
-                <div class="col-10">
-                    <h4>{{item.name}}</h4>
-                    <span class="text-muted">{{item.price}}</span>
-                    <span class="text-muted">{{item.pprice}}</span><br/>
-                    <p class="text-muted">{{item.message}}</p>
-                </div>
-                <!--            <p>{{item.logal}}</p>-->
+        <topbannercpn>
+            <div slot="content"  class="fixed-top">
+                商户列表
             </div>
-    </div>
-    </router-link>
+        </topbannercpn>
+        <div v-for="(item,index) in $root.shopLists" class="tanxing">
+
+            <div >
+                <img v-bind:src="item.img"/>
+            </div >
+            <div >
+                <h4>{{item.name}}</h4>
+                <span class="text-muted">{{item.price}}</span>
+                <span class="text-muted">{{item.pprice}}</span><br/>
+                <p class="text-muted">{{item.message}}</p>
+            </div>
+            <!--            <p>{{item.logal}}</p>-->
+
+        </div>
         <!--        <div style="height: 2000px;background-color: #ff6600">-->
         <!--            <ul>-->
         <!--                <li v-for="(item,index) in cgoodlists">{{item.gname}} &#45;&#45; {{item.gcount}}</li>-->
@@ -119,51 +117,6 @@
     </div>
 </template>
 
-<!--商家信息组件-->
-<template id="shopmessageTemp">
-    <div>
-        <topbannercpn class="fixed-top">
-            <div slot="content"   >
-                商家信息
-            </div>
-        </topbannercpn>
-        <div v-for="(item,index) in $root.sshopmessageLists" class="shopmessageTemp">
-            <div>
-                <img v-bind:src="item.img"/>
-            </div>
-            <h1 class="text-center font-weight-bold">{{item.name}}</h1>
-            <p class="text-muted text-center">
-                <span>{{item.price}}</span>
-                <span>{{item.pprice}}</span>
-            </p>
-            <p class="text-muted text-center">{{item.message}}</p>
-        </div>
-        <div v-for="(item,index) in $root.shopmessageLists" class="container-fluid">
-            <div class="row">
-                <div class="col-3">
-                    <img v-bind:src="item.img"/>
-                </div>
-                <div class="col-7">
-                    <span>{{item.logal}}</span>
-                    <h3>{{item.name}}</h3>
-                    <p>{{item.message}}</p>
-                    <p>{{item.price}}</p>
-                </div>
-                <div class="col-2">
-                    <p>{{item.count}}</p>
-                </div>
-
-            </div>
-        </div>
-        <div>
-
-        </div>
-        <mainnavcpn></mainnavcpn>
-        <gotopcpn></gotopcpn>
-
-
-    </div>
-</template>
 <!--我的页面登录组件-->
 <template id="loginTemp">
     <div>
@@ -188,8 +141,7 @@
                 </div>
                 <button type="button" class="btn btn-success btn-block">登录</button>
                 <router-link to="/register">
-                    <button type="button" class="btn btn-outline-secondary btn-block">去b
-                        注册</button>
+                    <button type="button" class="btn btn-outline-secondary btn-block">去注册</button>
                 </router-link>
 
             </form>
@@ -212,12 +164,12 @@
             <ul class="order">
                 <li>
                     <div class="order-info">
-                        <p>{{item.tname}}<i class="fa fa-caret-down"></i></p>
+                        <p>{{item.tname}}<i class="fa fa-caret-down" v-on:click="haha=!haha"></i></p>
                         <div class="order-info-right">
                             <p>&#165;{{item.allprice}}</p>
                         </div>
                     </div>
-                    <ul class="order-detailet">
+                    <ul class="order-detailet" v-show="haha">
                         <li>
                             <p>{{item.foodname}}</p>
                             <p>&#165;{{item.foodnameprice}}</p>
@@ -249,44 +201,44 @@
 <!--下面是订单页面-->
 <template id="orderTemp">
     <div class="wrapper">
-    <topbannercpn>
-        <div slot="content" class="fixed-top">
-            我的订单啊123
-        </div>
-    </topbannercpn>
-    <h3>你这订单没给钱呢</h3>
-    <div v-for="(item,index) in $root.badLists" >
-    <ul class="order">
-        <li>
-            <div class="order-info">
-                <p>{{item.tname}}<i class="fa fa-caret-down"></i></p>
-                <div class="order-info-right">
-                    <p>&#165;{{item.allprice}}</p>
-                    <div class="order-info-right-icon">
-                        <router-link to="/payonline">{{item.gotopay}}</router-link>
-                    </div>
-                </div>
+        <topbannercpn>
+            <div slot="content" class="fixed-top">
+                我的订单啊123
             </div>
-            <ul class="order-detailet">
+        </topbannercpn>
+        <h3>未支付订单:</h3>
+        <div v-for="(item,index) in $root.badLists" >
+            <ul class="order">
                 <li>
-                    <p>{{item.foodname}}</p>
-                    <p>&#165;{{item.foodnameprice}}</p>
-                </li>
-                <li>
-                    <p>{{item.foodname2}}</p>
-                    <p>&#165;{{item.foodname2price}}</p>
-                </li>
-                <li>
-                    <p>{{item.peisong}}</p>
-                    <p>&#165;3</p>
+                    <div class="order-info">
+                        <p v-on:click="isShow=!isShow">{{item.tname}}<i class="fa fa-caret-down"></i></p>
+                        <div class="order-info-right">
+                            <p>&#165;{{item.allprice}}</p>
+                            <div class="order-info-right-icon">
+                                <router-link to="/payonline">{{item.gotopay}}</router-link>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="order-detailet" v-show="isShow">
+                        <li>
+                            <p>{{item.foodname}}</p>
+                            <p>&#165;{{item.foodnameprice}}</p>
+                        </li>
+                        <li>
+                            <p>{{item.foodname2}}</p>
+                            <p>&#165;{{item.foodname2price}}</p>
+                        </li>
+                        <li>
+                            <p>{{item.peisong}}</p>
+                            <p>&#165;3</p>
+                        </li>
+                    </ul>
                 </li>
             </ul>
-        </li>
-    </ul>
-        </li>
-    </ul>
+            </li>
+            </ul>
 
-    </div>
+        </div>
         <mainnavcpn></mainnavcpn>
     </div>
 </template>
@@ -324,7 +276,7 @@
                 <input type="text" class="form-control" placeholder="用户姓名"  name="password">
             </div>
             性别:<input type="radio" name="sex">男
-                <input type="radio" name="sex">女
+            <input type="radio" name="sex">女
             <button type="button" class="btn btn-success btn-block">注册</button>
         </form>
         <mainnavcpn></mainnavcpn>
@@ -348,7 +300,7 @@
                 <h6 ><i class="fa fa-home"></i>发现</h6>
             </router-link>
             <router-link to="/odlist" class="col-2">
-            <h6 ><i class="fa fa-home"></i>订单</h6>
+                <h6 ><i class="fa fa-home"></i>订单</h6>
             </router-link>
             <router-link to="/login" class="col-2">
                 <h6 ><i class="fa fa-home"></i>我的</h6>
