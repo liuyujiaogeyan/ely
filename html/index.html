@@ -93,17 +93,22 @@
                 商户列表
             </div>
         </topbannercpn>
-        <div v-for="(item,index) in $root.shopLists" class="tanxing">
-
-            <div >
-                <img v-bind:src="item.img"/>
-            </div >
-            <div >
-                <h4>{{item.name}}</h4>
-                <span class="text-muted">{{item.price}}</span>
-                <span class="text-muted">{{item.pprice}}</span><br/>
-                <p class="text-muted">{{item.message}}</p>
+        <router-link to="/smlist">
+            <div v-for="(item,index) in $root.shopLists" class="container-fluid">
+                <div class="row">
+                    <div class="col-2">
+                        <img v-bind:src="item.img"/>
+                    </div>
+                    <div class="col-10">
+                        <h4>{{item.name}}</h4>
+                        <span class="text-muted">{{item.price}}</span>
+                        <span class="text-muted">{{item.pprice}}</span><br/>
+                        <p class="text-muted">{{item.message}}</p>
+                    </div>
+                    <!--            <p>{{item.logal}}</p>-->
+                </div>
             </div>
+        </router-link>
             <!--            <p>{{item.logal}}</p>-->
 
         </div>
@@ -117,6 +122,51 @@
     </div>
 </template>
 
+<!--商家信息组件-->
+<template id="shopmessageTemp">
+    <div>
+        <topbannercpn class="fixed-top">
+            <div slot="content"   >
+                商家信息
+            </div>
+        </topbannercpn>
+        <div v-for="(item,index) in $root.sshopmessageLists" class="shopmessageTemp">
+            <div>
+                <img v-bind:src="item.img"/>
+            </div>
+            <h1 class="text-center font-weight-bold">{{item.name}}</h1>
+            <p class="text-muted text-center">
+                <span>{{item.price}}</span>
+                <span>{{item.pprice}}</span>
+            </p>
+            <p class="text-muted text-center">{{item.message}}</p>
+        </div>
+        <div v-for="(item,index) in $root.shopmessageLists" class="container-fluid">
+            <div class="row">
+                <div class="col-3">
+                    <img v-bind:src="item.img"/>
+                </div>
+                <div class="col-7">
+                    <span>{{item.logal}}</span>
+                    <h3>{{item.name}}</h3>
+                    <p>{{item.message}}</p>
+                    <p>{{item.price}}</p>
+                </div>
+                <div class="col-2">
+                    <p>{{item.count}}</p>
+                </div>
+
+            </div>
+        </div>
+        <div>
+
+        </div>
+        <mainnavcpn></mainnavcpn>
+        <gotopcpn></gotopcpn>
+
+
+    </div>
+</template>
 <!--我的页面登录组件-->
 <template id="loginTemp">
     <div>
