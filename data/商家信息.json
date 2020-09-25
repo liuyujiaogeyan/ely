@@ -1,5 +1,15 @@
 {
   "dataZone":{
+    "slists":[
+      {
+        "img":"../img/sj01.png",
+        "logal":"新店",
+        "name":"万家饺子馆(软件园E18店)",
+        "price":"15起送",
+        "pprice":"3配送",
+        "message":"各种饺子炒菜"
+      }
+    ],
     "lists":[
       {
         "img":"../img/sp01.png",

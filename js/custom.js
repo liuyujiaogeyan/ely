@@ -17,6 +17,9 @@ let orderList = Vue.extend({
     },
 
 });
+let shopmessageList = Vue.extend({
+    template:'#shopmessageTemp'
+});
 let homeCpn = Vue.extend({
     template:'#homeTemp',
     props:['cgoodlists']
@@ -71,6 +74,7 @@ let goTopCpn = Vue.extend({
 //注册组件
 let payonline = Vue.component('payonline',payOnline)
 let orderlist = Vue.component('orderlist',orderList);
+let shopmessagelist = Vue.component('shopmessagelist',shopmessageList);
 let mainnavcpn = Vue.component('mainnavcpn',mainNavCpn);
 let homecpn = Vue.component('homecpn',homeCpn);
 let moucpn = Vue.component('moucpn',mouCpn);
@@ -84,6 +88,7 @@ let topbannercpn = Vue.component('topbannercpn',topBannerCpn);
 let routers = [
     {path:'/payonline',component:payOnline},
     {path:'/odlist',component:orderList },
+    {path:'/smlist',component:shopmessageList },
     {path:'/home',component:homeCpn},
     {path:'/mou',component:mouCpn},
     {path:'/login',component:loginCpn},
@@ -102,6 +107,8 @@ const vm = new Vue({
         goodLists:[],
         badLists:[],
         shopLists:[],
+        shopmessageLists:[],
+        sshopmessageLists:[]
     },
     router:myrouter,
     mounted(){
@@ -123,6 +130,12 @@ const vm = new Vue({
                 this.shopLists = res.body.dataZone.lists;
             }
         );
-
+        this.$http.get("../data/商家信息.json").then(
+            function (res){
+                //console.log(res);
+                this.shopmessageLists = res.body.dataZone.lists;
+                this.sshopmessageLists=res.body.dataZone.slists;
+            }
+        );
      }
 });
