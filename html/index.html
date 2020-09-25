@@ -143,17 +143,17 @@
             <p class="text-muted text-center">{{item.message}}</p>
         </div>
         <div v-for="(item,index) in $root.shopmessageLists" class="container-fluid">
-            <div class="row">
-                <div class="col-3">
+            <div class="tanxing">
+                <div>
                     <img v-bind:src="item.img"/>
                 </div>
-                <div class="col-7">
+                <div>
                     <span>{{item.logal}}</span>
                     <h3>{{item.name}}</h3>
                     <p>{{item.message}}</p>
                     <p>{{item.price}}</p>
                 </div>
-                <div class="col-2">
+                <div>
                     <p>{{item.count}}</p>
                 </div>
 
