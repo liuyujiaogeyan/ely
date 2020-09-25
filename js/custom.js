@@ -126,7 +126,7 @@ const vm = new Vue({
         );
         this.$http.get("../data/商家列表.json").then(
             function (res){
-                //console.log(res);
+                //console.log(res);;
                 this.shopLists = res.body.dataZone.lists;
             }
         );
