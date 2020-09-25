@@ -12,7 +12,7 @@
     bottom: 4em;
 }
 .topBannerTemp{
-    background-color: #005cbf;
+    background-color: #0298ff;
     height: 90px;
 }
 li{
@@ -189,5 +189,10 @@ li{
 }
 #car #firstcar p,h1{
     font-size: 25px;
+    color: white;
+}
+.toptext{
+    text-align: center;
+    font-size: 40px;
     color: white;
 }
