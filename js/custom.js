@@ -1,10 +1,21 @@
 ;
 //创建组件
 let payOnline = Vue.extend({
-    template:'#payTemp'
+    template:'#payTemp',
+    data:function(){
+        return {
+            haha:false
+        };
+    },
 })
 let orderList = Vue.extend({
-   template:'#orderTemp'
+   template:'#orderTemp',
+    data:function(){
+       return {
+           isShow:false
+       };
+    },
+
 });
 let homeCpn = Vue.extend({
     template:'#homeTemp',

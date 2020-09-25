@@ -75,12 +75,13 @@ li{
     display: flex;
 }
 .wrapper .order li .order-info .order-info-right .order-info-right-icon{
-    background-color: #f90;
+    background-color: #ff02e6;
     color: #fff;
     border-radius: 3px;
     margin-left: 2vw;
     user-select: none;
     cursor: pointer;
+    color: #34ce57;
 }
 .wrapper .order li .order-detailet{
     width: 100%;
@@ -98,4 +99,8 @@ li{
 }
 .wodima i{
     color: #34ce57;
+}
+.tanxing{
+display: flex;
+    flex-direction: row;
 }

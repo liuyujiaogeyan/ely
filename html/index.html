@@ -93,19 +93,19 @@
                     商户列表
               </div>
           </topbannercpn>
-        <div v-for="(item,index) in $root.shopLists" class="container-fluid">
-            <div class="row">
-                <div class="col-2">
+        <div v-for="(item,index) in $root.shopLists" class="tanxing">
+
+                <div >
                     <img v-bind:src="item.img"/>
-                </div>
-                <div class="col-10">
+                </div >
+                <div >
                     <h4>{{item.name}}</h4>
                     <span class="text-muted">{{item.price}}</span>
                     <span class="text-muted">{{item.pprice}}</span><br/>
                     <p class="text-muted">{{item.message}}</p>
                 </div>
                 <!--            <p>{{item.logal}}</p>-->
-            </div>
+
     </div>
         <!--        <div style="height: 2000px;background-color: #ff6600">-->
         <!--            <ul>-->
@@ -164,12 +164,12 @@
             <ul class="order">
                 <li>
                     <div class="order-info">
-                        <p>{{item.tname}}<i class="fa fa-caret-down"></i></p>
+                        <p>{{item.tname}}<i class="fa fa-caret-down" v-on:click="haha=!haha"></i></p>
                         <div class="order-info-right">
                             <p>&#165;{{item.allprice}}</p>
                         </div>
                     </div>
-                    <ul class="order-detailet">
+                    <ul class="order-detailet" v-show="haha">
                         <li>
                             <p>{{item.foodname}}</p>
                             <p>&#165;{{item.foodnameprice}}</p>
@@ -206,12 +206,12 @@
             我的订单啊123
         </div>
     </topbannercpn>
-    <h3>你这订单没给钱呢</h3>
+    <h3>未支付订单:</h3>
     <div v-for="(item,index) in $root.badLists" >
     <ul class="order">
         <li>
             <div class="order-info">
-                <p>{{item.tname}}<i class="fa fa-caret-down"></i></p>
+                <p v-on:click="isShow=!isShow">{{item.tname}}<i class="fa fa-caret-down"></i></p>
                 <div class="order-info-right">
                     <p>&#165;{{item.allprice}}</p>
                     <div class="order-info-right-icon">
@@ -219,7 +219,7 @@
                     </div>
                 </div>
             </div>
-            <ul class="order-detailet">
+            <ul class="order-detailet" v-show="isShow">
                 <li>
                     <p>{{item.foodname}}</p>
                     <p>&#165;{{item.foodnameprice}}</p>
