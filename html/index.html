@@ -142,7 +142,7 @@
             </p>
             <p class="text-muted text-center">{{item.message}}</p>
         </div>
-        <div v-for="(item,index) in $root.shopmessageLists" class="container-fluid">
+        <div v-for="(item,index) in $root.shopmessageLists" >
             <div class="tanxing">
                 <div>
                     <img v-bind:src="item.img"/>
@@ -153,7 +153,7 @@
                     <p>{{item.message}}</p>
                     <p>{{item.price}}</p>
                 </div>
-                <div>
+                <div class="jishuqi">
                     <p>{{item.count}}</p>
                 </div>
 
