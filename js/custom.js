@@ -27,6 +27,9 @@ let homeCpn = Vue.extend({
 let mouCpn = Vue.extend({
     template:'#mouTemp',
 });
+let carCpn = Vue.extend({
+    template:'#carTemp',
+});
 let loginCpn = Vue.extend({
     template:'#loginTemp',
 });
@@ -78,6 +81,7 @@ let shopmessagelist = Vue.component('shopmessagelist',shopmessageList);
 let mainnavcpn = Vue.component('mainnavcpn',mainNavCpn);
 let homecpn = Vue.component('homecpn',homeCpn);
 let moucpn = Vue.component('moucpn',mouCpn);
+let carcpn = Vue.component('carcpn',carCpn);
 let logincpn = Vue.component('logincpn',loginCpn);
 let registercpn = Vue.component('registercpn',registerCpn);
 let gotopcpn = Vue.component('gotopcpn',goTopCpn);

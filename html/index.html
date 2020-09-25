@@ -160,23 +160,8 @@
                 </div>
             </div>
         </div>
-        <div id="car" >
-            <div id="firstcar">
-                <div class="quan">
-                    <i class="fa fa-shopping-cart"></i>
-                    <div class="cart">3</div>
-                </div>
-                <div>
-                    <h1 class="display-4 font-weight-bold">12.88</h1>
-                    <p>另需配送费3元</p>
-                </div>
-
-            </div>
-            <div id="secondcar">去结算</div>
-        </div>
-
+        <carcpn></carcpn>
         <gotopcpn></gotopcpn>
-
     </div>
 </template>
 <!--我的页面登录组件-->
@@ -344,6 +329,26 @@
         <mainnavcpn></mainnavcpn>
     </div>
 </template>
+
+<!--购物车栏组件-->
+<template id="carTemp">
+    <div class="fixed-bottom">
+        <div id="car" >
+            <div id="firstcar">
+                <div class="quan">
+                    <i class="fa fa-shopping-cart"></i>
+                    <div class="cart">3</div>
+                </div>
+                <div>
+                    <h1 class="display-4 font-weight-bold">12.88</h1>
+                    <p>另需配送费3元</p>
+                </div>
+            </div>
+            <div id="secondcar">去结算</div>
+        </div>
+    </div>
+</template>
+
 <template id="goTopTemp">
     <transition enter-active-class="animated fadeIn">
         <div class="gotTopTemp" v-show="topDistance>100" v-on:click="goTop">
