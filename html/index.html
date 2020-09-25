@@ -58,6 +58,8 @@
 
             <!--推荐商家-->
             <h3 class="text-center">---推荐商家---</h3>
+            <tuijian></tuijian>
+
         </div>
         <mainnavcpn></mainnavcpn>
         <gotopcpn></gotopcpn>
@@ -85,6 +87,29 @@
     <!--</router-link>-->
     <!--</li>-->
     <!--</ul>-->
+</template>
+<template id="tuiTemp">
+    <div>
+        <div v-for="(item,index) in $root.tuijianList" class="tanxing">
+            <div><img v-bind:src="item.img"></div>
+            <div>
+                <h4>{{item.name}}</h4>
+                <p class="nieshijie"><span v-for="i in item.star"><i class="fa fa-star"></i></span>
+                    {{item.score}}月售{{item.sales}}单</p>
+                <p class="nieshijie">￥{{item.start}}起送|￥{{item.deliverCost}}配送</p>
+                <p class="nieshijie">{{item.tips}}</p>
+                <p class="nieshijie" v-for="(aitem,aindex) in item.activity">
+                    {{aitem.type}} {{aitem.des}}
+                </p>
+            </div>
+            <div class="jishuqi">
+                <p> <i class="fa fa-car"></i></p>
+                <p>{{item.delivery}}</p>
+                <p>{{item.distance}} | {{item.time}}分钟</p>
+                <p>2个活动</p>
+            </div>
+        </div>
+    </div>
 </template>
 
 <!--商户列表组件-->

@@ -1,5 +1,8 @@
 ;
 //创建组件
+let tuiJian = Vue.extend({
+    template:'#tuiTemp'
+})
 let payOnline = Vue.extend({
     template:'#payTemp',
     data:function(){
@@ -75,6 +78,7 @@ let goTopCpn = Vue.extend({
 });
 
 //注册组件
+let tuijian = Vue.component('tuijian',tuiJian)
 let payonline = Vue.component('payonline',payOnline)
 let orderlist = Vue.component('orderlist',orderList);
 let shopmessagelist = Vue.component('shopmessagelist',shopmessageList);
@@ -90,6 +94,7 @@ let topbannercpn = Vue.component('topbannercpn',topBannerCpn);
 
 //配置路由
 let routers = [
+    {path:'/tuijian',component:tuiJian},
     {path:'/payonline',component:payOnline},
     {path:'/odlist',component:orderList },
     {path:'/smlist',component:shopmessageList },
@@ -112,10 +117,16 @@ const vm = new Vue({
         badLists:[],
         shopLists:[],
         shopmessageLists:[],
-        sshopmessageLists:[]
+        sshopmessageLists:[],
+        tuijianList:[]
     },
     router:myrouter,
     mounted(){
+        this.$http.get("../data/首页商家信息.json").then(
+            function (res){
+                this.tuijianList = res.body.dataZone.lists;
+            }
+        )
          this.$http.get("../data/商品类型.json").then(
                function (res){
                 //console.log(res);
