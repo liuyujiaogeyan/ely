@@ -164,6 +164,22 @@
         <gotopcpn></gotopcpn>
     </div>
 </template>
+
+<!--订单确认组件-->
+<template id="fiorderTemp">
+    <div>
+        <topbannercpn class="fixed-top">
+            <div slot="content"   >
+                确认订单
+            </div>
+        </topbannercpn>
+        <div>
+
+        </div>
+        <gotopcpn></gotopcpn>
+    </div>
+</template>
+
 <!--我的页面登录组件-->
 <template id="loginTemp">
     <div>
@@ -344,10 +360,13 @@
                     <p>另需配送费3元</p>
                 </div>
             </div>
-            <div id="secondcar">去结算</div>
+            <router-link to="/fiorder">
+                <div id="secondcar">去结算</div>
+            </router-link>
         </div>
     </div>
 </template>
+
 
 <template id="goTopTemp">
     <transition enter-active-class="animated fadeIn">
