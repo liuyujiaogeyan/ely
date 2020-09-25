@@ -67,7 +67,7 @@
 <template id="typeTemp">
     <div class="container-fluid">
         <div class="tanxing">
-            <div v-for="(item,index) in $root.goodLists" />
+            <div v-for="(item,index) in $root.goodLists" class="text-center"/>
             <router-link to="/mou">
                 <img v-bind:src="item.img"/><br/>
 
@@ -158,15 +158,24 @@
                 <div class="jishuqi">
                     <p>{{item.count}}</p>
                 </div>
-
             </div>
         </div>
-        <div>
+        <div id="car" >
+            <div id="firstcar">
+                <div class="quan">
+                    <i class="fa fa-shopping-cart"></i>
+                    <div class="cart">3</div>
+                </div>
+                <div>
+                    <h1 class="display-4 font-weight-bold">12.88</h1>
+                    <p>另需配送费3元</p>
+                </div>
 
+            </div>
+            <div id="secondcar">去结算</div>
         </div>
-        <mainnavcpn></mainnavcpn>
-        <gotopcpn></gotopcpn>
 
+        <gotopcpn></gotopcpn>
 
     </div>
 </template>
