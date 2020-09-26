@@ -44,9 +44,9 @@
             <typecpn></typecpn>
             <!-- 广告-->
             <div class="bgimg">
-                <h1 class="font-weight-bold">品质套餐</h1>
-                <h3 class="text-muted">搭配齐全吃得好</h3>
-                <a href="index.html"><h3>立即抢购 ></h3></a>
+                <p class="font-weight-bold">品质套餐</p>
+                <p class="text-muted">搭配齐全吃得好</p>
+                <a href="index.html"><span>立即抢购 ></span></a>
             </div>
             <!--会员-->
             <div class="super">
@@ -68,7 +68,7 @@
 <!--主页美食分类-->
 <template id="typeTemp">
     <div class="container-fluid">
-        <div class="tanxing">
+        <div class="tanxinga">
             <div v-for="(item,index) in $root.goodLists" class="text-center"/>
             <router-link to="/mou">
                 <img v-bind:src="item.img"/><br/>
@@ -91,9 +91,9 @@
 <template id="tuiTemp">
     <div>
         <div v-for="(item,index) in $root.tuijianList" class="tanxing">
-            <div><img v-bind:src="item.img"></div>
+            <div><img v-bind:src="item.img" class="tuijiantupian"></div>
             <div>
-                <h4>{{item.name}}</h4>
+                <p class="dapipi">{{item.name}}</p>
                 <p class="nieshijie"><span v-for="i in item.star"><i class="fa fa-star"></i></span>
                     {{item.score}}月售{{item.sales}}单</p>
                 <p class="nieshijie">￥{{item.start}}起送|￥{{item.deliverCost}}配送</p>
@@ -194,7 +194,7 @@
 <template id="fiorderTemp">
     <div>
         <topbannercpn class="fixed-top">
-            <div slot="content"   >
+            <div slot="content"  class="toptext" >
                 确认订单
             </div>
         </topbannercpn>
@@ -309,11 +309,12 @@
             </li>
             </ul>
         </div>
-        <ul class="wodima">
-            <li><img src="../img/alipay.png" alt="">
-                <i class="fa fa-check-square"></i></li>
-            <li><img src="../img/wechat.png" alt=""></li>
-        </ul>
+        <div class="wodima">
+            <p><img src="../img/alipay.png" alt="">
+                <i class="fa fa-check-square"></i></p>
+            <p><img src="../img/wechat.png" alt=""></p>
+        </div>
+        <button>确认支付</button>
         <button type="button" class="btn btn-success btn-block">确认支付</button>
         <mainnavcpn></mainnavcpn>
 
@@ -325,7 +326,7 @@
     <div class="wrapper">
         <topbannercpn>
             <div slot="content" class="toptext">
-                我的订单啊
+                我的订单
             </div>
         </topbannercpn>
         <h3>未支付订单:</h3>
@@ -368,7 +369,7 @@
 <template id="registerTemp">
     <div>
         <topbannercpn>
-            <div slot="content" class="fixed-top">
+            <div slot="content" class="toptext">
                 用户注册
             </div>
         </topbannercpn>
