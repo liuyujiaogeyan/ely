@@ -65,8 +65,8 @@ li{
 }
 .super img{
     float: left;
-    width: 70px;
-    height: 70px;
+    width: 10vw;
+    height: 10vw;
 }
 .wrapper .order li .order-info{
     box-sizing: border-box;
