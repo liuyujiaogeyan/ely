@@ -77,9 +77,9 @@
 
 </template>
 <template id="tuiTemp">
-    <div>
+    <div class="tuiTemp">
         <div v-for="(item,index) in $root.tuijianList" class="tanxing">
-            <div><img v-bind:src="item.img" class="tuijiantupian"></div>
+            <div class="imgc"><img v-bind:src="item.img" class="tuijiantupian"></div>
             <div>
                 <router-link to="/smlist">
                 <p class="dapipi">{{item.name}}</p>
@@ -122,14 +122,10 @@
                         <span class="text-muted">{{item.pprice}}</span><br/>
                         <p class="text-muted">{{item.message}}</p>
                     </div>
-                    <!--            <p>{{item.logal}}</p>-->
                 </div>
             </div>
             <mainnavcpn></mainnavcpn>
         </router-link>
-            <!--            <p>{{item.logal}}</p>-->
-
-
         <mainnavcpn></mainnavcpn>
         <gotopcpn></gotopcpn>
     </div>
@@ -160,7 +156,6 @@
                     <img v-bind:src="item.img"/>
                 </div>
                 <div>
-                    <span>{{item.logal}}</span>
                     <h3>{{item.name}}</h3>
                     <p>{{item.message}}</p>
                     <p>{{item.price}}</p>
@@ -186,7 +181,7 @@
         <div>
             <div class="peisong">
                 <p>订单配送至:</p>
-                <p> 沈阳市浑南区智慧四街1-121号 </p>
+                <h2> 沈阳市浑南区智慧四街1-121号</h2>
                 <p>马云先生 18888888888</p>
             </div>
             <h2>万家饺子 (软件园E18店)</h2>
@@ -204,9 +199,9 @@
                     </div>
                 </div>
             </div>
-            <div class="container-fluid peisongfei">
+            <div class="container-fluid ">
                 <div class="row text-muted">
-                    <div class="col-10 offset-md-2"><h4>配送费</h4></div>
+                    <div class="col-10 "><h4>配送费</h4></div>
                     <div class="col-2 "><h4>3</h4></div>
                 </div>
             </div>
@@ -299,7 +294,6 @@
                 <i class="fa fa-check-square"></i></p>
             <p><img src="../img/wechat.png" alt=""></p>
         </div>
-        <button>确认支付</button>
         <button type="button" class="btn btn-success btn-block">确认支付</button>
         <mainnavcpn></mainnavcpn>
 

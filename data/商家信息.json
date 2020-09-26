@@ -5,8 +5,8 @@
         "img":"../img/sj01.png",
         "logal":"新店",
         "name":"万家饺子馆(软件园E18店)",
-        "price":"15起送",
-        "pprice":"3配送",
+        "price":"￥15起送",
+        "pprice":"￥3配送",
         "message":"各种饺子炒菜"
       }
     ],
@@ -16,48 +16,48 @@
         "logal":"招牌",
         "name":"纯肉鲜肉(水饺)",
         "message":"新鲜猪肉",
-        "price":15,
-        "count":3
+        "price":"￥15",
+        "count":"￥3"
       },
       {
         "img":"../img/sp02.png",
         "logal":"招牌",
         "name":"玉米鲜肉(水饺)",
         "message":"玉米猪肉",
-        "price":16,
-        "count":2
+        "price":"￥16",
+        "count":"￥2"
       },
       {
         "img":"../img/sp03.png",
         "logal":"",
         "name":"虾仁三鲜(蒸饺)",
         "message":"虾仁三鲜",
-        "price":22,
-        "count":1
+        "price":"￥22",
+        "count":"￥1"
       },
       {
         "img":"../img/sp04.png",
         "logal":"",
         "name":"素三鲜(蒸饺)",
         "message":"素三鲜",
-        "price":15,
-        "count":0
+        "price":"￥15",
+        "count":"￥0"
       },
       {
         "img":"../img/sp05.png",
         "logal":"",
         "name":"角瓜鸡蛋(蒸饺)",
         "message":"角瓜鸡蛋",
-        "price":16,
-        "count":0
+        "price":"￥16",
+        "count":"￥0"
       },
       {
         "img":"../img/sp06.png",
         "logal":"",
         "name":"小白菜肉(水饺)",
         "message":"小白菜肉",
-        "price":18,
-        "count":0
+        "price":"￥18",
+        "count":"￥0"
       },
       {
         "img":"../img/sp07.png",

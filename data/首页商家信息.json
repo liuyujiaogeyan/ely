@@ -5,7 +5,7 @@
         "img": "../img/sj01.png","name": "万家饺子(睿道店)",
         "star": 5,"score": 4.8,
         "sales": 3445,"delivery": "蜂鸟专送","start": 150,"deliverCost": 30,
-        "distance": 3.33,
+        "distance": "3.33km",
         "time": 35,
         "tips": "各种饺子海菜包子",
         "activity": [
@@ -18,7 +18,7 @@
         "img": "../img/sj02.png","name": "小锅饭豆腐馆(全运店)",
         "star": 4,"score": 4.8,
         "sales": 6344,"delivery": "蜂鸟专送","start": 125,"deliverCost": 23,
-        "distance": 2.33,
+        "distance": "2.33km",
         "time": 20,
         "tips": "各种饺子海菜包子",
         "activity": [
@@ -31,7 +31,7 @@
         "img": "../img/sj03.png","name": "麦当劳麦乐送(全运店)",
         "star": 4,"score": 4.9,
         "sales": 4,"delivery": "蜂鸟专送","start": 2,"deliverCost": 53,
-        "distance": 53.33,
+        "distance": "53.33km",
         "time": 25,
         "tips": "各种饺子海菜包子",
         "activity": [
@@ -44,7 +44,7 @@
         "img": "../img/sj04.png","name": "米村拌饭(浑南店)",
         "star": 5,"score": 4.9,
         "sales": 3474,"delivery": "蜂鸟专送","start": 1,"deliverCost": 30,
-        "distance": 1.33,
+        "distance": "1.33km",
         "time": 40,
         "tips": "各种饺子海菜包子",
         "activity": [
@@ -57,8 +57,8 @@
         "img": "../img/sj05.png","name": "申记串道(中海康城店)",
         "star": 5,"score": 4.9,
         "sales": 8344,"delivery": "蜂鸟专送","start": 1025,"deliverCost": 358,
-        "distance": 0.33,
-        "time": 500,
+        "distance": "0.33km",
+        "time": 50,
         "tips": "各种饺子海菜包子",
         "activity": [
           {"type": "新","des": "新用户首单减三个亿"},

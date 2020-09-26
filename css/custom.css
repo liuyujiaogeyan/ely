@@ -20,15 +20,10 @@ li{
 }
 .bgimg{
     font-size: 5vw;
-    /**
-	 * 设置容器宽度95%，然后水平居中，这样两边留白;
-	 * 这里不能用padding，因为背景图片也会覆盖padding
-	 */
     width: 95%;
     margin: 0 auto;
     height: 29vw;
 
-    /*此三个样式组合，可以保证背景图片充满整个容器*/
     background-image: url(../img/index_banner.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -145,7 +140,7 @@ li{
 }
 #car{
     width: 100%;
-    height: 140px;
+    height: 120px;
     left: 0;
     bottom: 0;
     display: flex;
@@ -195,7 +190,7 @@ li{
     width: 250px;
     font-size: 50px;
     color: white;
-    line-height: 140px;
+    line-height: 120px;
     text-align: center;
 }
 #car #firstcar p{
@@ -232,7 +227,7 @@ li{
 }
 .total{
     width: 100%;
-    height: 140px;
+    height: 100px;
     left: 0;
     bottom: 0;
     display: flex;
@@ -257,7 +252,7 @@ li{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 140px;
+    height: 100px;
     width: 250px;
 }
 .tuijiantupian{
@@ -268,9 +263,14 @@ li{
     font-size: 5vw;
 }
 body{
-    margin-top: 100px;
+    margin-top: 85px;
     margin-bottom: 120px;
 }
+
 .peisong{
     background-color: #0499ff;
+    color: white;
+}
+.peisong p{
+    font-size: 20px;
 }
