@@ -24,7 +24,6 @@
 </div>
 <template id="homeTemp">
     <div>
-        <!--<topbannercpn v-bind:c-good-lists="goodLists">-->
         <topbannercpn class="fixed-top">
             <div slot="loc" v-on:click="myFunc(age,$event)">
                 <i class="fa fa-location-arrow"></i>大连东软信息学院<i class="fa fa -arrow-circle-o-down"></i>
@@ -39,7 +38,6 @@
                 </div>
             </div>
         </topbannercpn>
-        <!--<typecpn></typecpn>-->
         <div style="height: 2000px">
             <typecpn></typecpn>
             <!-- 广告-->
@@ -59,7 +57,6 @@
             <!--推荐商家-->
             <h3 class="text-center">---推荐商家---</h3>
             <tuijian></tuijian>
-
         </div>
         <mainnavcpn></mainnavcpn>
         <gotopcpn></gotopcpn>
@@ -72,21 +69,12 @@
             <div v-for="(item,index) in $root.goodLists" class="text-center"/>
             <router-link to="/mou">
                 <img v-bind:src="item.img"/><br/>
-
                 {{item.tname}}
             </router-link>
             </div>
         </div>
-    </div>>
+    </div>
 
-    <!--<ul>-->
-    <!--<li v-for="(item,index) in $root.goodLists" class="col-2 offset-1">-->
-    <!--<router-link to="/mou">-->
-    <!--<img v-bind:src="item.img"/><br/>-->
-    <!--{{item.tname}}-->
-    <!--</router-link>-->
-    <!--</li>-->
-    <!--</ul>-->
 </template>
 <template id="tuiTemp">
     <div>
@@ -142,11 +130,6 @@
             <!--            <p>{{item.logal}}</p>-->
 
         </div>
-        <!--        <div style="height: 2000px;background-color: #ff6600">-->
-        <!--            <ul>-->
-        <!--                <li v-for="(item,index) in cgoodlists">{{item.gname}} &#45;&#45; {{item.gcount}}</li>-->
-        <!--            </ul>-->
-        <!--        </div>-->
         <mainnavcpn></mainnavcpn>
         <gotopcpn></gotopcpn>
     </div>
@@ -445,13 +428,13 @@
                 <h6 ><i class="fa fa-home"></i>首页</h6>
             </router-link>
             <router-link to="/mou" class="col-2">
-                <h6 ><i class="fa fa-home"></i>发现</h6>
+                <h6 ><i class="fa fa-compass"></i>发现</h6>
             </router-link>
             <router-link to="/odlist" class="col-2">
-                <h6 ><i class="fa fa-home"></i>订单</h6>
+                <h6 ><i class="fa fa-file-text-o"></i>订单</h6>
             </router-link>
             <router-link to="/login" class="col-2">
-                <h6 ><i class="fa fa-home"></i>我的</h6>
+                <h6 ><i class="fa fa-user-o"></i>我的</h6>
             </router-link>
         </div>
     </div>
