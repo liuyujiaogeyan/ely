@@ -199,7 +199,41 @@
             </div>
         </topbannercpn>
         <div>
+            <div>
+                <p>订单配送至:</p>
+                <h1>沈阳市浑南区智慧四街1-121号</h1>
+                <p>马云先生 18888888888</p>
+            </div>
+            <h2>万家饺子 (软件园E18店)</h2>
+            <hr/>
+            <div class="container-fluid" v-for="(item,index) in $root.fiorderlist">
+                <div class="row">
+                    <div class="col-3 fipay">
+                        <img v-bind:src="item.img"/>
+                    </div>
+                    <div class="col-7 fipay text-muted">
+                        {{item.name}}
+                    </div>
+                    <div class="col-2 fipay text-muted">
+                        {{item.price}}
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid peisongfei">
+                <div class="row text-muted">
+                    <div class="col-10 offset-md-2"><h4>配送费</h4></div>
+                    <div class="col-2 "><h4>3</h4></div>
+                </div>
+            </div>
 
+            <div class="fixed-bottom total">
+                <div class="total-left">
+                    <h2>49</h2>
+                </div>
+                <div class="total-right">
+                    <h2>去支付</h2>
+                </div>
+            </div>
         </div>
         <gotopcpn></gotopcpn>
     </div>
