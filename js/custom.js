@@ -36,9 +36,6 @@ let carCpn = Vue.extend({
 let fiorderCpn = Vue.extend({
     template:'#fiorderTemp',
 });
-let wpayonlineCpn = Vue.extend({
-    template:'#wpayonlineTemp',
-});
 let loginCpn = Vue.extend({
     template:'#loginTemp',
 });
@@ -93,7 +90,6 @@ let homecpn = Vue.component('homecpn',homeCpn);
 let moucpn = Vue.component('moucpn',mouCpn);
 let carcpn = Vue.component('carcpn',carCpn);
 let fiordercpn = Vue.component('fiordercpn',fiorderCpn);
-let wpayonlinecpn = Vue.component('wpayonlinecpn',wpayonlineCpn);
 let logincpn = Vue.component('logincpn',loginCpn);
 let registercpn = Vue.component('registercpn',registerCpn);
 let gotopcpn = Vue.component('gotopcpn',goTopCpn);
@@ -109,7 +105,6 @@ let routers = [
     {path:'/home',component:homeCpn},
     {path:'/mou',component:mouCpn},
     {path:'/fiorder',component:fiorderCpn},
-    {path:'/wpayonline',component:wpayonlineCpn},
     {path:'/login',component:loginCpn},
     {path:'/register',component:registerCpn},
     {path:'/',component:homeCpn},

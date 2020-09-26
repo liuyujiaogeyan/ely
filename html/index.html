@@ -51,9 +51,9 @@
             <!--会员-->
             <div class="super">
                 <img src="../img/super_member.png"/>
-                <span class="font-weight-bolder display-4">超级会员・</span>
-                <span>每月享超值权益</span>
-                <a href="index.html"><span class="text-right">立即开通 ></span></a>
+                <span class="font-weight-bolder display-4 span1">超级会员・</span>
+                <span class="span2">每月享超值权益</span>
+                <a href="index.html"><span class="text-right ">立即开通 ></span></a>
             </div>
 
             <!--推荐商家-->
@@ -225,15 +225,14 @@
                     <div class="col-2 "><h4>3</h4></div>
                 </div>
             </div>
-
-            <div class="fixed-bottom total">
-                <div class="total-left">
-                    <h2>49</h2>
-                </div>
-                <div class="total-right">
-                    <h2>去支付</h2>
-                </div>
+        </div>
+        <div class="fixed-bottom total">
+            <div class="total-left">
+                <h2>49</h2>
             </div>
+            <router-link to="/payonline">
+                <div class="total-right">去支付</div>
+            </router-link>
         </div>
         <gotopcpn></gotopcpn>
     </div>
@@ -309,17 +308,18 @@
             </ul>
             </li>
             </ul>
-
         </div>
         <ul class="wodima">
             <li><img src="../img/alipay.png" alt="">
                 <i class="fa fa-check-square"></i></li>
             <li><img src="../img/wechat.png" alt=""></li>
         </ul>
+        <button type="button" class="btn btn-success btn-block">确认支付</button>
         <mainnavcpn></mainnavcpn>
 
     </div>
 </template>
+
 <!--下面是订单页面-->
 <template id="orderTemp">
     <div class="wrapper">
