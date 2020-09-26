@@ -33,6 +33,12 @@ let mouCpn = Vue.extend({
 let carCpn = Vue.extend({
     template:'#carTemp',
 });
+let fiorderCpn = Vue.extend({
+    template:'#fiorderTemp',
+});
+let wpayonlineCpn = Vue.extend({
+    template:'#wpayonlineTemp',
+});
 let loginCpn = Vue.extend({
     template:'#loginTemp',
 });
@@ -78,14 +84,16 @@ let goTopCpn = Vue.extend({
 });
 
 //注册组件
-let tuijian = Vue.component('tuijian',tuiJian)
-let payonline = Vue.component('payonline',payOnline)
+let tuijian = Vue.component('tuijian',tuiJian);
+let payonline = Vue.component('payonline',payOnline);
 let orderlist = Vue.component('orderlist',orderList);
 let shopmessagelist = Vue.component('shopmessagelist',shopmessageList);
 let mainnavcpn = Vue.component('mainnavcpn',mainNavCpn);
 let homecpn = Vue.component('homecpn',homeCpn);
 let moucpn = Vue.component('moucpn',mouCpn);
 let carcpn = Vue.component('carcpn',carCpn);
+let fiordercpn = Vue.component('fiordercpn',fiorderCpn);
+let wpayonlinecpn = Vue.component('wpayonlinecpn',wpayonlineCpn);
 let logincpn = Vue.component('logincpn',loginCpn);
 let registercpn = Vue.component('registercpn',registerCpn);
 let gotopcpn = Vue.component('gotopcpn',goTopCpn);
@@ -100,6 +108,8 @@ let routers = [
     {path:'/smlist',component:shopmessageList },
     {path:'/home',component:homeCpn},
     {path:'/mou',component:mouCpn},
+    {path:'/fiorder',component:fiorderCpn},
+    {path:'/wpayonline',component:wpayonlineCpn},
     {path:'/login',component:loginCpn},
     {path:'/register',component:registerCpn},
     {path:'/',component:homeCpn},
@@ -118,7 +128,8 @@ const vm = new Vue({
         shopLists:[],
         shopmessageLists:[],
         sshopmessageLists:[],
-        tuijianList:[]
+        tuijianList:[],
+        fiorderlist:[]
     },
     router:myrouter,
     mounted(){
@@ -150,6 +161,12 @@ const vm = new Vue({
                 //console.log(res);
                 this.shopmessageLists = res.body.dataZone.lists;
                 this.sshopmessageLists=res.body.dataZone.slists;
+            }
+        );
+        this.$http.get("../data/确认订单.json").then(
+            function (res){
+                //console.log(res);
+                this.fiorderlist = res.body.dataZone.lists;
             }
         );
      }
